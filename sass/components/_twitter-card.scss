@@ -1,0 +1,24 @@
+.twitter-card {
+	border-radius: 0.2rem;
+	@extend .z-depth-2;
+
+	&__header {
+		padding: 1.5rem 0;
+		text-align: center;
+	}
+
+	&__title {
+		display: block;
+		color: color('blue', 'base');
+		font-size: 1.3rem;
+		font-weight: 500;
+		margin: 0.2rem;
+	}
+
+	&__main {
+		max-height: 25rem;
+		overflow-y: hidden;
+
+		&:hover { overflow-y: scroll; }
+	}
+}

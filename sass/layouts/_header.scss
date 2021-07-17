@@ -1,0 +1,145 @@
+.header {
+	background-image: 
+		linear-gradient(
+			to right bottom, 
+			rgba($primary-color, 0.9),
+			rgba($primary-color-light, 0.3)
+		),
+		url('/images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	height: 30vh;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: inherit;
+
+		@media #{$medium-and-down} {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__player-counter {
+		padding: 0.5rem;
+		transition: padding 1s;
+		flex: 0 0 15%;
+
+		& > span:first-child {
+			font-weight: 500;
+			font-size: 1.8rem;
+		}
+
+		@media #{$medium-and-down} {
+			text-align: center;
+		}
+	}
+
+	&__text-box {
+		flex: 0 0 70%;
+
+		@media #{$medium-and-down} {
+			flex: 0 0 auto;
+			margin: 1.6rem 0;
+		}
+	}
+
+	&__search-box {
+		flex: 0 0 15%;
+
+		@media #{$medium-and-down} {
+			flex: 0 0 auto;
+			width: 100%;
+		}
+
+		@media #{$medium-only} {
+			width: 50%;
+		}
+	}
+
+	@media #{$medium-and-down} {
+		flex-direction: column;
+		justify-content: center;
+		height: 60vh;
+	}
+
+	@media #{$medium-only} {
+		height: 30vh;
+	}
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(10, 5vw);
+	grid-gap: 0.5rem;
+	margin-top: 0.5rem;
+
+	&__item {
+		position: relative;
+		background-size: 8rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		border-radius: 0.3rem;
+
+		&--1 {
+			grid-row: 1 / span 6;
+			background-color: color('blue', 'base');
+			background-image: url('/images/end-portal.png');
+
+			@media #{$small-and-down} {
+				grid-row: 1 / span 5;
+			}
+		}
+
+		&--2 {
+			grid-row: 1 / span 3;
+			background-image: url('/images/grass_block.svg');
+			background-color: color('red', 'accent-2');
+
+			@media #{$small-and-down} {
+				grid-row: 1 / span 5;
+			}
+		}
+
+		&--3 {
+			grid-row: 4 / span 3;
+			background-image: url('/images/bed.png');
+			background-color: color('green', 'accent-2');
+
+			@media #{$small-and-down} {
+				grid-row: 6 / span 5;
+			}
+		}
+
+		&--4 {
+			grid-column: 1 / span 2;
+			grid-row: 7 / 10;
+			background-color: color('blue-grey', 'darken-2');
+			background-image: url('/images/sponge.png');
+
+			@media #{$small-and-down} {
+				grid-column: auto;
+				grid-row: 6 / span 5;
+			}
+		}
+
+		@media #{$small-and-down} {
+			background-size: 1.8rem;
+		}
+	}
+
+	&__caption {
+		color: white;
+		font-weight: bold;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+	}
+}

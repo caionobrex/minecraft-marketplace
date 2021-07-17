@@ -1,0 +1,27 @@
+.price-tag {
+	display: inline-block;
+	margin-top: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	&__discount {
+		margin-right: 0.5rem;
+		font-size: 0.8rem;
+		color: color('yellow', 'darken-2');
+	}
+
+	&__price {
+		font-size: 1.2rem;
+
+		&--standard {
+			@extend .price-tag__price;
+			text-decoration: line-through;
+			color: color('grey', 'base');
+		}
+
+		&--discounted {
+			@extend .price-tag__price;
+			color: color('grey', 'darken-2');
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.search-box {
+	display: flex;
+	align-items: center;
+	position: relative;
+	border-radius: 30rem;
+	background-color: white;
+	transition: box-shadow 1s;
+	@extend .z-depth-1;
+
+	&:hover { @extend .z-depth-3; }
+
+	&__input {
+		border: none;
+		border-radius: 30rem;
+		padding: 0.7rem 1rem;
+		outline: none;
+		color: color('grey', 'darken-1');
+
+		@media #{$medium-only} { width: 100%; }
+
+		@media #{$small-and-down} { width: 90%; }
+	}
+}

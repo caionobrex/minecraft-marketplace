@@ -1,0 +1,20 @@
+.products-section {
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0 0.5rem;
+		margin-top: -0.2rem;
+
+		.card {
+			width: 100%;
+			transition: box-shadow 0.6s;
+
+			&:hover { @extend .z-depth-3; }
+		}
+
+		@media #{$medium-and-down} {
+			grid-template-columns: auto;
+		}
+	}
+}
