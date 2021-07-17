@@ -1,4 +1,4 @@
-This is a simples minecraft marketplace.
+This is a simple minecraft marketplace.
 
 Even though I used PHP to build this project, it has no connection with DATABASE. All this project's data is
 just simple arrays declared inside the php file.
